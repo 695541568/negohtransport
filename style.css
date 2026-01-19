@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background: #f2f2f2;
     margin: 0;
+    padding: 0;
 }
 
 header {
@@ -36,6 +37,7 @@ input, select, textarea {
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -58,7 +60,6 @@ button:hover {
     background: #084298;
 }
 
-/* ANGALIZO */
 .notice-section {
     background: #fff3cd;
     border: 1px solid #ffeeba;
