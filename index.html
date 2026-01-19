@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <title>Akili cargo Transport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Akili Cargo Transport</h1>
+    <p>Usafirishaji salama wa mizigo kutoka Dar es Salaam kwenda Ngara</p>
+</header>
+
+<section class="form-section">
+    <h2>KARIBU AKILI CARGO</h2>
+
+    <form onsubmit="tumaWhatsApp(); return false;">
+
+        <label>Jina Kamili</label>
+        <input type="text" id="jina" required>
+
+        <label>Namba ya Simu</label>
+        <input type="tel" id="simu" placeholder="07XXXXXXXX" required>
+
+        <label>Aina ya Mzigo</label>
+        <select id="ainaMzigo" required>
+            <option value="">Chagua aina ya mzigo</option>
+            <option>Kifurushi</option>
+            <option>Televisheni</option>
+            <option>Friji</option>
+            <option>Samani</option>
+            <option>Vifaa vya Umeme</option>
+            <option>Mengineyo</option>
+        </select>
+
+        <label>Thamani ya Mzigo (TZS)</label>
+        <input type="number" id="thamani" placeholder="Mfano: 580000" required>
+
+        <label>Kutoka</label>
+        <input type="text" value="Dar es Salaam" readonly>
+
+        <label>Kuelekea</label>
+        <input type="text" value="Ngara" readonly>
+
+        <label>Eneo la Kuchukulia Mzigo (Dar es Salaam)</label>
+        <input type="text" id="pickup" required>
+
+        <label>Ukubwa au Uzito wa Mzigo</label>
+        <input type="text" id="size" placeholder="Mfano: Kati / 50kg">
+
+        <label>Tarehe Unayotaka Kusafirisha</label>
+        <input type="date" id="date" required>
+
+        <label>Maelezo ya Ziada (Hiari)</label>
+        <textarea id="notes" placeholder="Mfano: mzigo ni dhaifu, ushughulikiwe kwa uangalifu"></textarea>
+
+        <button type="submit">Tuma Ombi Kupitia WhatsApp</button>
+    </form>
+</section>
+
+<!-- ANGALIZO / MASHARTI -->
+<section class="notice-section">
+    <h3>ANGALIZO MUHIMU</h3>
+    <ol>
+        <li>
+            Mzigo wowote utakaopokelewa na kampuni ukiwa katika hali nzuri,
+            utakuwa chini ya dhamana ya kampuni mpaka kufikishwa Ngara.
+        </li>
+        <li>
+            Mteja anapaswa kuhakikisha mzigo wake umefungwa vizuri na kwa usalama
+            kabla ya kukabidhiwa kwa kampuni.
+        </li>
+        <li>
+            Endapo mzigo utapotea au kuharibika ukiwa chini ya dhamana ya kampuni,
+            kampuni itamrejeshea mteja fidia kulingana na thamani ya mzigo
+            iliyotajwa na kuthibitishwa.
+        </li>
+    </ol>
+</section>
+
+<footer>
+    <p>© 2026 Akili cargo transport | Route: Dar es Salaam → Ngara</p>
+</footer>
+
+<script>
+function tumaWhatsApp() {
+
+    let jina = document.getElementById("jina").value;
+    let simu = document.getElementById("simu").value;
+    let ainaMzigo = document.getElementById("ainaMzigo").value;
+    let thamani = document.getElementById("thamani").value;
+    let pickup = document.getElementById("pickup").value;
+    let size = document.getElementById("size").value;
+    let date = document.getElementById("date").value;
+    let notes = document.getElementById("notes").value;
+
+    let ujumbe =
+`Habari Nego & H cargo transport,
+
+Naomba huduma ya usafirishaji wa mzigo.
+
+Jina: ${jina}
+Simu: ${simu}
+Aina ya Mzigo: ${ainaMzigo}
+Thamani ya Mzigo: TZS ${thamani}
+Kutoka: Dar es Salaam
+Kwenda: Ngara
+Eneo la Kuchukua: ${pickup}
+Ukubwa/Uzito: ${size}
+Tarehe ya Kusafirisha: ${date}
+Maelezo ya Ziada: ${notes}
+
+Nimekubali masharti na dhamana ya mzigo.
+Asante.`;
+
+    let nambaWhatsApp = "255674150672"; 
+    let url = "https://wa.me/" + nambaWhatsApp + "?text=" + encodeURIComponent(ujumbe);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
+
+

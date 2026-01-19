@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <title>Safi Cargo | Fuatilia Mzigo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Nego & H Cargo</h1>
+    <p>Fuatilia mzigo wako kutoka Dar es Salaam kwenda Ngara</p>
+</header>
+
+<section class="form-section">
+    <h2>Fuatilia Mzigo Wako</h2>
+
+    <p>Ingiza **Tracking Number** uliyopewa baada ya kuwasilisha ombi lako la mzigo.</p>
+
+    <input type="text" id="tracking" placeholder="Mfano: SCN-2026-001" required>
+    <button onclick="trackMzigo()">Angalia Mzigo</button>
+</section>
+
+<footer>
+    <p>© 2026 Safi Cargo Transport | Route: Dar es Salaam → Ngara</p>
+</footer>
+
+<script>
+function trackMzigo() {
+    let trackingNo = document.getElementById("tracking").value.trim();
+
+    if(trackingNo === "") {
+        alert("Tafadhali ingiza Tracking Number yako!");
+        return;
+    }
+
+    // Jumbe ya WhatsApp kwa mteja
+    let ujumbe = `Habari Safi Cargo,
+    
+Naomba kufuatilia mzigo wangu. Tracking Number: ${trackingNo}
+
+Asante.`;
+
+    let nambaWhatsApp = "255674150672"; 
+    let url = "https://wa.me/" + nambaWhatsApp + "?text=" + encodeURIComponent(ujumbe);
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

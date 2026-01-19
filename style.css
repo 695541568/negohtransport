@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+
+header {
+    background: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.form-section {
+    background: white;
+    max-width: 520px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #0b5ed7;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #084298;
+}
+
+/* ANGALIZO */
+.notice-section {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    max-width: 520px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.notice-section h3 {
+    color: #856404;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.notice-section ol {
+    padding-left: 20px;
+}
+
+.notice-section li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+}
