@@ -89,3 +89,17 @@ footer {
     padding: 15px;
     color: #666;
 }
+
+@media (max-width: 600px) {
+    .form-section,
+    .notice-section {
+        margin: 20px auto;
+        width: 92%;
+        max-width: 92%;
+    }
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
